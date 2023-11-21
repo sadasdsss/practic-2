@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+class Circle {
+private:
+    double radius;
+
+public:
+    // Конструктор класса с параметром
+    Circle(double circleRadius)
+        : radius(circleRadius) {}
+
+    // Метод установки значения радиуса
+    void setRadius(double circleRadius) {
+        radius = circleRadius;
+    }
+
+    // Метод для получения площади круга
+    double getArea() const {
+        return 3.14 * radius * radius;  // Площадь круга: π * r^2
+    }
+};
+
+int main() {
+    // Создание объекта класса "Круг" с использованием конструктора
+    Circle myCircle(7);
+
+    // Получение и вывод площади круга с использованием метода
+    cout << "Площадь круга: " << myCircle.getArea() << endl;
+
+    return 0;
+}
