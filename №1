@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+class Student {
+private:
+    string name;
+    int age;
+    double averageGrade;
+
+public:
+    // Конструктор класса с параметрами по умолчанию
+    Student(string studentName, int studentAge, double studentAverageGrade)
+        : name(studentName), age(studentAge), averageGrade(studentAverageGrade) {}
+
+    // Метод для вывода информации о студенте
+    void printStudentInfo() {
+        cout << "Имя: " << name << endl;
+        cout << "Возраст: " << age << " лет" << endl;
+        cout << "Средний балл: " << averageGrade << endl;
+    }
+};
+
+int main() {
+    // Создание объекта класса Student с использованием конструктора
+    Student student("Вася Пупкин", 17, 4.3);
+
+    // Вывод информации о студенте
+    student.printStudentInfo();
+
+    return 0;
+}
