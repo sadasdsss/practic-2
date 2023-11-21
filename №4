@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+class Rectangle {
+private:
+    double width;
+    double height;
+
+public:
+    // Конструктор класса с параметрами по умолчанию
+    Rectangle(double rectangleWidth, double rectangleHeight)
+        : width(rectangleWidth), height(rectangleHeight) {}
+
+    // Метод для получения площади прямоугольника
+    double getArea() const {
+        return width * height;
+    }
+
+    // Метод для вывода информации о прямоугольнике
+    void RectangleInfo() const {
+        cout << "Ширина прямоугольника: " << width << endl;
+        cout << "Высота прямоугольника: " << height << endl;
+        cout << "Площадь прямоугольника: " << getArea() << endl;
+    }
+};
+
+int main() {
+    // Создание объекта класса "Прямоугольник" с использованием конструктора
+    Rectangle myRectangle(8, 7);
+
+    // Вывод информации о прямоугольнике с использованием метода
+    myRectangle.RectangleInfo();
+
+    return 0;
+}
