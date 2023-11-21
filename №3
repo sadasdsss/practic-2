@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Car {
+private:
+    string brand;
+    string model;
+    int year;
+
+public:
+    // Конструктор класса с параметрами по умолчанию
+    Car(string carBrand ,string carModel ,int carYear)
+        : brand(carBrand), model(carModel), year(carYear) {}
+
+    // Метод для вывода информации об автомобиле
+    void getCarInfo() const {
+        cout << "Марка: " << brand << endl;
+        cout << "Модель: " << model << endl;
+        cout << "Год выпуска: " << year << endl;
+    }
+};
+
+int main() {
+    // Создание объекта класса "Автомобиль" с использованием конструктора
+    Car myCar("Lada", "Vesta", 2019);
+
+    // Вывод информации об автомобиле
+    cout << "Информация об автомобиле:" << endl;
+    myCar.getCarInfo();
+
+    return 0;
+}
