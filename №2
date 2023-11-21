@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+class Book {
+private:
+    string title;
+    string author;
+    int year;
+
+public:
+    // Конструктор класса "Книга"
+    Book(string bookTitle, string bookAuthor, int bookYear)
+        : title(bookTitle), author(bookAuthor), year(bookYear) {}
+
+    // Метод для получения информации о книге
+    void getBookInfo() const {
+        cout << "Название: " << title << endl;
+        cout << "Автор: " << author << endl;
+        cout << "Год издания: " << year << endl;
+    }
+};
+
+int main() {
+    // Использование конструктора для создания объекта класса "Книга"
+    Book myBook("Зеленая миля", "Стивен Кинг", 1996);
+
+    // Вывод информации о книге
+    cout << "Информация о книге:" << endl;
+    myBook.getBookInfo();
+
+    return 0;
+}
